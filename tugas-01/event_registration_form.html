@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f6f6f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .form-container {
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .row div {
+        flex: 1;
+    }
+
+    label {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .tshirt-size {
+        margin-bottom: 15px;
+    }
+
+    .tshirt-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    .tshirt-options label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .terms {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Event Registration Form</h2>
+        <p>Please fill out the form below to register for the event.</p>
+
+        <form>
+            <div class="row">
+                <div>
+                    <label>First Name</label>
+                    <input type="text" placeholder="John" required>
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Doe" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="john.doe@example.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+1 (555) 123-4567" required>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label>Country</label>
+                    <select required>
+                        <option value="">Select Country</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>United Kingdom</option>
+                        <option>Australia</option>
+                        <option>Indonesia</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Date of Birth</label>
+                    <input type="text" placeholder="MM/DD/YYYY" required>
+                </div>
+            </div>
+
+            <div class="tshirt-size">
+                <label>T-Shirt Size</label>
+                <div class="tshirt-options">
+                    <label><input type="checkbox"> Small</label>
+                    <label><input type="checkbox"> Medium</label>
+                    <label><input type="checkbox"> Large</label>
+                    <label><input type="checkbox"> Extra Large</label>
+                </div>
+            </div>
+
+            <h3>Emergency Contact Information</h3>
+
+            <div class="input-group">
+                <label>Emergency Contact Name</label>
+                <input type="text" placeholder="Jane Smith" required>
+            </div>
+
+            <div class="input-group">
+                <label>Emergency Contact Phone Number</label>
+                <input type="tel" placeholder="+1 (555) 123-4567" required>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" required>
+                <label>I agree to the terms and conditions of this event.</label>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+</body>
+</html>

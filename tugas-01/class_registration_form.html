@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .name-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .name-group input {
+            flex: 1;
+        }
+
+        .class-days {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .days {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .days label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+  </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Class Registration Form</h2>
+        <p>Please fill out the form below to register for our class</p>
+
+        <form>
+            <div class="name-group">
+                <input type="text" placeholder="First Name" required />
+                <input type="text" placeholder="Last Name" required />
+            </div>
+
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone Number" required />
+
+            <label>Class Level</label>
+            <select required>
+                <option value="">Select your class level</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+
+            <small>Please choose the appropriate level for your experience</small>
+
+            <div class="class-days">
+                <label>Class Days</label>
+                <small>Please select the days you are available to attend class</small>
+                <div class="days">
+                    <label><input type="checkbox" /> Monday</label>
+                    <label><input type="checkbox" /> Tuesday</label>
+                    <label><input type="checkbox" /> Wednesday</label>
+                    <label><input type="checkbox" /> Thursday</label>
+                    <label><input type="checkbox" /> Friday</label>
+                    <label><input type="checkbox" /> Saturday</label>
+                </div>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" required />
+                <label>I agree to the terms and conditions of the class registration</label>
+            </div>
+
+            <button type="submit">Register Now!</button>
+        </form>
+    </div>
+</body>
+</html>

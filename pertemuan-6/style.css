@@ -1,0 +1,39 @@
+        p {
+            color: red;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        body {
+            /* background-color: lightgrey; */
+            background: linear-gradient(yellow, blue, red)
+        }
+        h1, h2 {
+            color: blue;
+            text-align: center;
+        }
+        .tulis1 {
+            color: purple;
+            font-size: 20px;
+            font-family: Arial;
+            font-style: italic;
+        }
+        #tulis2 {
+            color: green;
+            font-size: 7px;
+            font-family: Poppins;
+            font-style: bold;
+        }
+
+            a { text-decoration: none; }
+            a:link { color: blue; }
+            a:visited { color: purple; }
+            a:hover { color: red; }
+            a:active { color: green; }
+
+        p::first-line {
+         font-weight: bold;
+         color: orange;
+        }
+        p::first-letter {
+        font-size: 2em;
+        }
