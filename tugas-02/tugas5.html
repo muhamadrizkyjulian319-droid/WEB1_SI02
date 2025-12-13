@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Method Chaining</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #notifikasi {
+            display: none;
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid #ccc;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="show">Tampilkan Notifikasi</button>
+
+    <div id="notifikasi">Ini adalah notifikasi!</div>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#show").click(function() {
+
+                $("#notifikasi")
+                    .css("background", "#4da3ff")
+                    .fadeIn(500)
+                    .slideDown(500)
+                    .delay(3000)
+                    .slideUp(500)
+                    .fadeOut(500);
+
+            });
+
+        });
+    </script>
+</body>
+</html>

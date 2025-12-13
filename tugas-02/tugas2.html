@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Sederhana (Create/Delete Elements)</title>
+
+    <!-- Buat aplikasi to-do list sederhana. -->
+     
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #box {
+            width: 320px;
+            padding: 20px;
+            border: 1px solid #999;
+            border-radius: 10px;
+        }
+        input {
+            width: 200px;
+            padding: 6px;
+        }
+        button {
+            padding: 6px 10px;
+            margin: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>List Sederhana yang Pengen Kamu Lakuin!</h1>
+
+    <div id="box">
+        <input type="text" id="inputTugas" placeholder="Tulis dulu...">
+        <button onclick="tambah()">Tambah</button>
+        <button onclick="hapusTerakhir()">Hapus Terakhir</button>
+
+        <ul id="listTugas"></ul>
+    </div>
+
+    <script>
+        function tambah() {
+            const input = document.getElementById("inputTugas").value;
+
+            if (input.trim() === "") {
+                alert("Tulis sesuatu dulu dong, baru tambah ke list!");
+                return;
+            }
+
+            const liBaru = document.createElement("li");
+            liBaru.textContent = input;
+
+            document.getElementById("listTugas").appendChild(liBaru);
+
+            document.getElementById("inputTugas").value = "";
+        }
+
+        function hapusTerakhir() {
+            const list = document.getElementById("listTugas");
+
+            if (list.lastChild) {
+                list.removeChild(list.lastChild);
+            } else {
+                alert("Tulis sesuatu dulu dong, baru hapus dari list!");
+            }
+        }
+    </script>
+</body>
+</html>

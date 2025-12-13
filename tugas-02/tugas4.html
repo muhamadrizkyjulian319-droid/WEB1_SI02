@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects (fade, slide)</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Buat slideshow gambar sederhana. -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #slideshow {
+            width: 400px;
+            height: 250px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            margin: 20px 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animasi SlideShow Gambar Sederhana</h1>
+
+    <div id="slideshow">
+        <img src="Logo STT-NF.png" alt="Logo STT-NF" class="slide" style="display: block;">
+        <img src="map_chart_850c.png" alt="Map Depok" class="slide">
+        <img src="images.jpg" alt="mode on aktif dinyalakan!" class="slide">
+    </div>
+
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+
+    <script>
+        $(document).ready(function() {
+
+            let index = 0;
+            const slides = $(".slide");
+            const total = slides.length;
+
+            function showSlide(i) {
+                slides.fadeOut(300);
+                slides.eq(i).fadeIn(300);
+            }
+
+            $("#next").click(function() {
+                index = (index + 1) % total;
+                showSlide(index);
+            });
+
+            $("#prev").click(function() {
+                index = (index - 1 + total) % total;
+                showSlide(index);
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<p id="text">Contoh method chaining.</p>
+<button id="run">Jalankan</button>
+
+<script>
+$(function(){
+    $("#run").click(function(){
+        $("#text")
+        .css("color","red")
+        .slideUp(2000)
+        .slideDown(2000);
+    });
+});
+</script>

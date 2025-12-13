@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Interaktif (Selectors & Events)</title>
+
+    <!-- Buat halaman FAQ yang interaktif menggunakan jQuery. -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 600px;
+            margin: 40px auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background: #f2f2f2;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            border-left: 3px solid #007bff;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Apasih yang Kamu Cari???</h1>
+
+    <div class="faq-item">
+        <div class="question">Apa sih Animasi itu?</div>
+        <div class="answer">Animasi adalah perubahan cepat gambar yang berurutan sehingga menghasilkan suatu ilusi. Animasi dibuat dengan mengurutkan kumpulan gambar, kemudian ditampilkan satu per satu dengan cepat. Ketika beberapa gambar muncul secara berurutan dengan cepat, otak akan menggabungkannya menjadi suatu gambar bergerak.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">Ada berapa sih jenis Animasi itu?</div>
+        <div class="answer">Animasi memiliki beberapa jenis, yaitu:
+            <ul>
+                <li>Animasi 2D/Tradisional</li>
+                <li>Animasi 3D</li>
+                <li>Animasi Stop Motion</li>
+                <li>Motion Graphics</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">Apa itu Animasi 2D/Tradisional?</div>
+        <div class="answer">Merupakan jenis animasi yang mengharuskan animatornya membuat ribuan gambar dengan pergerakan yang sedikit untuk menghasilkan gerakan animasi yang mulus.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">Apa itu Animasi 3D?</div>
+        <div class="answer">Jenis Animasi 3D merupakan animasi yang memiliki bentuk ruang dan volume pada animasi 3D objek bisa di gerakan ke 3 sumbu X, Y, dan Z. Pembuatan animasi 3D biasa nya dilakukan dengan software 3D seperti:
+            <ul>
+                <li>Blender</li>
+                <li>Autodesk Maya</li>
+                <li>Cinema 4D</li>
+                <li>3ds Max</li>
+                <li>Houdini</li>
+                <li>Unreal Engine</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">Apa itu Animasi Stop Motion?</div>
+        <div class="answer">Animasi Stop Motion merupakan sebuah teknik pembuatan animasi yang proses nya merupakan pemindahan objek seperti clay atau boneka yang digerakkan sedikit demi sedikit dan setiap pemindahannya di foto oleh kamera dan akan memberikan ilusi seolah olah objek itu bergerak ketika seluruh fotonya di gabungkan.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">Apa itu Animasi Motion Graphics</div>
+        <div class="answer">Motion Graphic adalah kombinasi dari grafis statis dan gerakan animasi jenis ini sering digunakan untuk keperluan iklan, video musik, dan intro acara Televisi atau Youtube dan animasi logo. Teknik ini mencakup penggunaan text, gambar, dan efek visual lainnya yang bergerak dengan dinamis.</div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+            $(".question").click(function() {
+                $(this).next(".answer").toggle();
+            });
+
+            $(".question").hover(
+                function() { 
+                    $(this).css("color", "blue"); 
+                },
+                function() { 
+                    $(this).css("color", "black"); 
+                }
+            );
+
+        });
+    </script>
+</body>
+</html>

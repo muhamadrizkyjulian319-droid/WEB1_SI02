@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Manipulation (HTML DOM)</title>
+
+    <!-- Buat halaman biodata yang dapat diubah secara dinamis menggunakan JavaScript DOM -->
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #biodata {
+            border: 1px solid #aaa;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            background-color: #ffffff;
+            box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+            border-radius: 12px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Halaman Biodata Dinamis</h1>
+    
+    <div id="biodata">
+        <img id="foto" src="" alt="Foto Profil">
+        <p><strong>Nama:</strong> <span id="nama">Nama Lengkap Anda</span></p>
+        <p><strong>NIM:</strong> <span id="nim">Contoh: 123456789</span></p>
+        <p><strong>Program Studi:</strong> <span id="prodi">Contoh :Teknik Informatika</span></p>
+    </div>
+    
+    <div>
+        <button onclick="ubahNama()">Ubah Nama</button>
+        <button onclick="ubahProdi()">Ubah Program Studi</button>
+        <button onclick="gantiFoto()">Ganti Foto</button>
+        <button onclick="sembunyikanBiodata()">Sembunyikan Biodata</button>
+        <button onclick="tampilkanBiodata()">Tampilkan Biodata</button>
+    </div>
+
+    <script>
+        function ubahNama() {
+            var namaBaru = prompt("Masukkan nama baru:");
+            if (namaBaru) {
+                document.getElementById("nama").innerHTML = namaBaru;
+            }
+        }
+
+        function ubahProdi() {
+            var prodiBaru = prompt("Masukkan program studi baru:");
+            if (prodiBaru) {
+                document.getElementById("prodi").innerHTML = prodiBaru;
+            }
+        }
+
+        function gantiFoto() {
+            var fotoBaru = prompt("Masukkan URL foto baru:");
+            if (fotoBaru) {
+                document.getElementById("foto").setAttribute("src", fotoBaru);
+            }
+        }
+
+        function sembunyikanBiodata() {
+            document.getElementById("biodata").style.display = "none";
+        }
+
+        function tampilkanBiodata() {
+            document.getElementById("biodata").style.display = "block";
+        }
+    </script>
+</body>
+</html>
