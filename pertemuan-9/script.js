@@ -1,7 +1,5 @@
-function tambahBorder() {
-    document.getElementById("box").style.border = "3px solid blue";
-}
+/* Filename: script.js*/
 
-function hapusBorder() {
-    document.getElementById("box").style.border = "none";
+function myFun() {
+  document.getElementById("demo").innerHTML = "Content Changed";
 }

@@ -18,7 +18,7 @@ console.log(jumlah(5, 7));
 
 
 // Default Parameter & Rest Parameter
-function salam(nama = "Kontol") {
+function salam(nama = "Ryan") {
     console.log("Hai " + nama + "!");
 }
 

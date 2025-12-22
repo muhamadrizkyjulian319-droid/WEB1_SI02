@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal JavaScript</title>
+</head>
+<body>
+    <h2 id="judul">Ini Judul Awal</h2>
+    <button onclick="ubahTeks()">Ubah Judul</button>
+    <button onclick="ubahWarna()">Ubah Warna</button>
+
+    <script>
+        function ubahTeks() {
+            document.getElementById("judul").innerText = "Teks sudah berubah oleh JavaScript!";
+        }
+
+        // Tambahan: ubah warna teks
+        function ubahWarna() {
+            document.getElementById("judul").style.color = "red";
+        }
+    </script>
+</body>
+</html>

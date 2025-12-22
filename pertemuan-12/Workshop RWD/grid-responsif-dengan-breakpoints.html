@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+    }
+    .grid > div {
+        background: #f8c4b4;
+        padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .grid > div {
+        grid-column: span 12;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 992px) {
+        .item-large {
+        grid-column: span 12;
+        }
+        .item-medium {
+        grid-column: span 6;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .item-large {
+        grid-column: span 12;
+        }
+        .item-medium {
+        grid-column: span 6;
+        }
+        .item-small {
+        grid-column: span 3;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item-large">Item Large</div>
+        <div class="item-medium">Item Medium</div>
+        <div class="item-medium">Item Medium</div>
+        <div class="item-small">Item Small</div>
+    </div>
+</body>
+</html>

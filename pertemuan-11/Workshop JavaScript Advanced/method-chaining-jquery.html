@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Chaining jQuery</title>
+</head>
+<body>
+    <p id="text">Contoh method chaining.</p>
+    <button id="run">Jalankan</button>
+
+    <script>
+        $(function () {
+            $("#run").click(function () {
+                $("#text").css("color", "red").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+</body>
+</html>
